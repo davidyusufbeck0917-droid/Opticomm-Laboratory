@@ -723,3 +723,96 @@ button {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* ===================================== */
+/* MOBILE RESPONSIVE FIX */
+/* ===================================== */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  #page-header1,
+  #page-header2 {
+    height: auto;
+    padding: 60px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #page-header1 .text,
+  .page-foto {
+    width: 100%;
+  }
+
+  .page-foto img {
+    max-width: 80%;
+  }
+
+  /* NAVBAR */
+  #heading {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  /* MODULE & ACTIVITY */
+  #module,
+  #activity {
+    grid-template-columns: 1fr;
+  }
+
+  #module .foto1 img,
+  #activity .foto1 img {
+    width: 100%;
+  }
+
+  /* MODUL GRID */
+  #modul-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .modul {
+    width: 90%;
+  }
+
+  /* TEAM GRID */
+  .asistens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .asisten {
+    width: 100%;
+  }
+
+  /* VISI MISI */
+  #visi-misi {
+    flex-direction: column;
+  }
+
+  .visi,
+  .misi {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* CONTACT SECTION */
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form input {
+    width: 100%;
+  }
+
+  .contact-form textarea {
+    width: 100%;
+  }
+
+}
