@@ -794,7 +794,7 @@ button {
   .visi,
   .misi {
     width: 100%;
-    padding: 0;
+    padding: 50px;
   }
 
   /* CONTACT SECTION */
@@ -816,4 +816,5 @@ button {
   }
 
 }
+
 
