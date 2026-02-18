@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="bahan foto web/header.png">
+</head>
+
+<body id="main">
+    <div id="loading-wrapper">
+        <div class="loader-content">
+            <img src="bahan foto web\header.png" class="loader-logo">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <p id="progress-text">0%</p>
+        </div>
+    </div>
+
+
+    <header id="heading">
+        <nav class="redirecting">
+            <a href="web.html" class="redirecting-a">About Us</a>
+            <a href="our team.html" class="redirecting-a">Our Team</a>
+            <a href="our activity.html" class="redirecting-a">Our Activity</a>
+        </nav>
+
+        <a href="web.html" class="logo">
+            <img src="bahan foto web\header.png">
+        </a>
+
+        <a href="informations.html" class="cta-btn">Information</a>
+    </header>
+
+    <main>
+        <section id="page-header2">
+            <div class="text">
+                <h1>Module 2</h1>
+            </div>
+        </section>
+
+        <section id="our-team-page">
+            <div id="module">
+                <div class="foto1">
+                    <img src="bahan foto web/modul2.png">
+                </div>
+                <div>
+                    <h3>Modul 2</h3>
+                    <p>
+                        Focuses on optical fiber network performance measurement techniques using instruments such as
+                        OTDR and OPM. Students learn how OTDR is used to detect faults, measure fiber length, and
+                        determine attenuation along the transmission path. In addition, the Optical Power Meter (OPM) is
+                        used to measure optical power levels. Through hands-on practice and data analysis, students are
+                        trained to interpret measurement results for evaluating network quality and troubleshooting
+                        purposes.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="tab-container">
+                <div class="tab-header">
+                    <button class="tab-btn active" onclick="openTab('modul')">Modul</button>
+                    <button class="tab-btn" onclick="openTab('video')">Vidio</button>
+                    <button class="tab-btn" onclick="openTab('kalku')">Kalkulator</button>
+                </div>
+
+                <div class="tab-content active" id="modul">
+                    <p>Klik kalau klen kepo dengan modul kami</p>
+                </div>
+
+                <div class="tab-content" id="video">
+                    <p>Ini adalah konten video kami</p>
+                </div>
+
+                <div class="tab-content" id="kalku">
+                    <h2>🧮 Kalkulator Fiber Optik</h2>
+
+                    <div class="box">
+                        <label>Pilih Jenis Perhitungan:</label><br>
+                        <select id="mode" onchange="ubahMode()">
+                            <option value="loss">1) Total Loss Link</option>
+                            <option value="budget">2) Power Budget</option>
+                            <option value="jarak">3) Jarak Maksimum</option>
+                            <option value="splitter">4) Splitter Loss</option>
+                            <option value="otdr">5) Estimasi OTDR</option>
+                        </select>
+
+                        <hr>
+
+
+                        <div id="common">
+                            <div class="input-row">Panjang fiber (km): <input id="panjang" type="number" value="10">
+                            </div>
+                            <div class="input-row">Loss fiber (dB/km): <input id="lossKm" type="number" value="0.2">
+                            </div>
+                            <div class="input-row">Jumlah konektor: <input id="conn" type="number" value="2"></div>
+                            <div class="input-row">Jumlah splice: <input id="splice" type="number" value="4"></div>
+                        </div>
+
+                        <!-- ====== KHUSUS POWER BUDGET ====== -->
+                        <div id="budgetBox" class="hidden">
+                            <div class="input-row">Tx Power (dBm): <input id="tx" type="number" value="0"></div>
+                            <div class="input-row">Rx Sensitivity (dBm): <input id="rx" type="number" value="-25"></div>
+                        </div>
+
+                        <!-- ====== KHUSUS SPLITTER ====== -->
+                        <div id="splitBox" class="hidden">
+                            <div class="input-row">
+                                Splitter:
+                                <select id="split">
+                                    <option value="3.5">1:2</option>
+                                    <option value="7.2">1:4</option>
+                                    <option value="10.5">1:8</option>
+                                    <option value="13.8">1:16</option>
+                                    <option value="17">1:32</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button onclick="hitung()">Hitung</button>
+
+                        <div id="hasil" class="result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="social-footer">
+        <a href="https://www.instagram.com/opticommlaboratory" target="_blank" class="social-link">
+            <img src="bahan foto web/instagram.jpg">
+        </a>
+        <a href="https://line.me/R/ti/p/@wth3637e?from=page&liff.referrer=https%3A%2F%2Fopticomlab.com%2F&searchId=wth3637e"
+            target="_blank" class="social-link">
+            <img src="bahan foto web/line.jpg">
+        </a>
+        <a href="https://www.linkedin.com/company/optical-communication-laboratory/" target="_blank"
+            class="social-link">
+            <img src="bahan foto web/linkedin.jpg">
+        </a>
+        <a href="https://www.youtube.com/@OpticommLaboratoryTel-U/videos" target="_blank" class="social-link">
+            <img src="bahan foto web/youtube.jpg">
+        </a>
+    </footer>
+
+
+    <script src="java.js"></script>
+
+</body>
+
+</html>
